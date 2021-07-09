@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat';
+  font-weight: 400;
+}
+
+.dropdown_order {
+  & > .text {
+    font-size: 12px;
+  }
+}
+
+.menu {
+  // right: 0 !important;
+  // margin: 0;
+}
+
+.ui.menu {
+  margin: 0 !important;
+}
+
+.ui.inline.dropdown>.text {
+  font-weight: 500 !important;
+  
+}
+
+.dropdown_ {
+  // margin-left: 20px;
+  padding: 8px 20px !important;
+  background: #1D1B1F;
+  // margin: 0;
+
+}

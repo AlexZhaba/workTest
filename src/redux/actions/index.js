@@ -1,0 +1,10 @@
+export const LOAD_GAMES = 'LOAD_GAMES';
+export const SET_GAMES  = 'SET_GAMES';
+export const SET_PAGE = 'SET_PAGE';
+export const SET_PLATFORMS = 'SET_PLATFORMS';
+export const SET_SEARCH = 'SET_SEARCH';
+export const ADD_GAMES = 'ADD_GAMES';
+export const SET_ORDERING = 'SET_ORDERING';
+export const SET_PLATFORM_FILTER = 'SET_PLATFORM_FILTER';
+export const LOAD_GAME_DETAIL = 'LOAD_GAME_DETAIL';
+export const SET_GAME_DETAIL = 'SET_GAME_DETAIL';
