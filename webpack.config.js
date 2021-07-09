@@ -34,7 +34,7 @@ module.exports = {
     contentBase: [path.resolve(__dirname, 'dist')],
     port: 9000,
     watchContentBase: true,
-    host: '192.168.1.87',
+    // host: '192.168.1.87',
     disableHostCheck: true,
     historyApiFallback: true
     // publicPath: path.resolve(__dirname, 'dist'),
