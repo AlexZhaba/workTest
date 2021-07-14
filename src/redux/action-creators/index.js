@@ -35,7 +35,6 @@ export const loadGameDetail = (slug, callback) => (dispatch, getState) => {
   })
 }
 
-
 export const setGames = (games) => ({
   type: SET_GAMES,
   games

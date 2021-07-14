@@ -3,9 +3,7 @@ import { Wrapper, Spin } from './style';
 const Loader = () => {
   return (
     <Wrapper>
-      <Spin>
-
-      </Spin>
+      <Spin/>
     </Wrapper>
   )
 }

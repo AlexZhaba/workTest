@@ -2,14 +2,12 @@ import React, { useState, useRef } from 'react'
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import Platform from './Platform'
-
 import useControlModal from '@hooks/useControlModal'
-
 import { setPlatformFilter, loadGames, setPage } from '@redux/action-creators'
-
 import { Container, Text } from '@shared';
 
 const FilterPlatforms = ({ platforms, setPlatformFilter, loadGames, setPage, platformFilter }) => {
+
   const menuRef = useRef();
   const [isOpen, setIsOpen] = useState(false);
   const [parentPlatform, setParentPlatform] = useState(null)
@@ -34,6 +32,7 @@ const FilterPlatforms = ({ platforms, setPlatformFilter, loadGames, setPage, pla
   }
 
   if (!platforms) return <div></div>
+  
   return (
     <Wrapper>
       <Container pad='8px 20px' no-overflow active={platformFilter}>

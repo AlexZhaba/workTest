@@ -9,10 +9,10 @@ const Search = ({ searchString, handleSearch }) => {
         handleSearch();
       }
     }
-    document.addEventListener('keydown', handle)
+    document.addEventListener('keydown', handle);
 
     return () => {
-      document.removeEventListener('keydown', handle)
+      document.removeEventListener('keydown', handle);
     }
   }, [handleSearch])
 

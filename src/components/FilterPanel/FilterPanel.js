@@ -1,10 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
 import OrderSelector from '@com/OrderSelector/OrderSelector.js'
 import FilterPlatforms from '@com/FilterPlatforms/FilterPlatforms.js'
-import { Container } from '@shared'
-
 import { setOrdering, loadGames, setPage } from '@redux/action-creators'
 import { Wrapper } from './style';
 

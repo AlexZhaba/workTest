@@ -1,11 +1,9 @@
 import React from 'react';
-
-import { Text, Rating } from '@shared';
+import { Rating } from '@shared';
 import { Wrapper, Release, Adaptive } from './style.js';
 import parseDate from '@utils/parsedDate.js'
 
-const GameTitle = ({ text, rating, release }) => {
-  return (
+const GameTitle = ({ text, rating, release }) => (
     <Wrapper>
       <Release>
         {parseDate(release)}
@@ -13,8 +11,7 @@ const GameTitle = ({ text, rating, release }) => {
       <Adaptive size="50px">{text}</Adaptive>
       {rating && <Rating rate={rating} posIn style={{marginLeft: 15}}>{rating}</Rating>}
     </Wrapper>
-  )
-}
+)
 
 export default GameTitle;
 

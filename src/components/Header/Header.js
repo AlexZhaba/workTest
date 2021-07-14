@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { useHistory } from 'react-router';
-
 import {Text} from '@shared';
 import { setSearch } from '@redux/action-creators'
 import Search from '@com/Search/Search.js';
@@ -21,7 +20,6 @@ const Header = ({  setSearch, loadGames, setPage,  setPlatformFilter, setOrderin
     loadGames();
     history.push('/')
   }
-
 
   return (
     <HeaderWrapper>

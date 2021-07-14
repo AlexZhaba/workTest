@@ -2,9 +2,7 @@ import React, { useState, useRef } from 'react';
 import { Container, Text } from '@shared'
 import { Dropdown } from './style.js'
 import Order from './Order';
-
 import useControlModal from '@hooks/useControlModal.js'
-
 import { orderName } from '../../config';
 
 const orderingType = [ 
@@ -14,11 +12,9 @@ const orderingType = [
 const OrderSelector = ({ ordering, handleChange }) => {
 
   const menuRef = useRef();
-
   const [isOpen, setIsOpen] = useState(false);
 
-
-  useControlModal(menuRef, setIsOpen)
+  useControlModal(menuRef, setIsOpen);
 
   return (
     <Container no-overflow pad='8px 20px'>
