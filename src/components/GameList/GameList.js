@@ -3,11 +3,11 @@ import { useHistory } from 'react-router';
 import { withRouter } from 'react-router';
 import useScroll from '@hooks/useScroll.js'
 
-import { List } from './style.js'
-
+import { List, LoadingContainer } from './style.js'
+import Loader from '@com/Loader/Loader.js';
 import GameCard from '@com/GameCard/GameCard.js'
 
-const GameList = ({ games, loadGames, loadPlatforms, platforms, loadGameDetail }) => {
+const GameList = ({ games, loadGames, loadPlatforms, platforms, loadGameDetail, loading }) => {
   
   const history = useHistory();
 
@@ -29,12 +29,15 @@ const GameList = ({ games, loadGames, loadPlatforms, platforms, loadGameDetail }
     })
   }
 
-  if (!platforms || !games) return <div></div>
-
+  // if (!platforms || !games) return <div></div>
+  
   return (
     <div>
       <List>
-        {games && games.map((game, id) => <GameCard game={game} key={id} handleCard={handleCard}/>)}
+        <LoadingContainer loading={loading}>
+          <Loader/>
+        </LoadingContainer>
+        {(platforms && games) && games.map((game, id) => <GameCard game={game} key={id} handleCard={handleCard}/>)}
       </List>
     </div>
   )

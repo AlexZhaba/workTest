@@ -7,7 +7,8 @@ const initialState = {
   search: '',
   ordering: 'popularity',
   platformFilter: null,
-  gameDetail: null 
+  gameDetail: null,
+  loading: false,
 }
 
 const App = (state = initialState, action) => {
@@ -69,6 +70,13 @@ const App = (state = initialState, action) => {
       return {
         ...state,
         gameDetail: action.gameDetail
+      }
+    }
+
+    case Actions.SET_LOADING: {
+      return {
+        ...state,
+        loading: action.loading
       }
     }
 

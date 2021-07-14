@@ -18,6 +18,7 @@ const Main = (props) => {
           loadPlatforms={props.loadPlatforms}
           platforms={props.platforms}
           loadGameDetail={props.loadGameDetail}
+          loading={props.loading}
         />
       </ContentContainer>
     </MainWrapper>
@@ -26,7 +27,8 @@ const Main = (props) => {
 
 const mapStateToProps = (state) => ({
   games: state.app.games,
-  platforms: state.app.platforms
+  platforms: state.app.platforms,
+  loading: state.app.loading
 })
 
 export default connect(mapStateToProps, { loadGames, loadPlatforms, loadGameDetail })(Main);

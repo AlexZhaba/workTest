@@ -1,17 +1,19 @@
 import { 
   SET_PAGE, SET_GAMES, SET_PLATFORMS, 
   SET_SEARCH, ADD_GAMES, SET_ORDERING, SET_PLATFORM_FILTER, 
-   SET_GAME_DETAIL } from '@redux/actions'
+   SET_GAME_DETAIL, SET_LOADING } from '@redux/actions'
 import axios from 'axios'
 import URLCreator from '@utils/URLCreator.js'
 
 export const loadGames = (option) => (dispatch, getState) => {
+  if (option !== 'ADD') dispatch(setLoading(true))
   axios.get(URLCreator.games(getState().app)).then(response => {
     console.log(response)
     if (option === 'ADD') {
       dispatch(addGames(response.data.results))
     } else dispatch(setGames(response.data.results))
     dispatch(setPage(getState().app.gamePage + 1))
+    dispatch(setLoading(false))
   })
 }
 
@@ -72,4 +74,9 @@ export const setPlatformFilter = (platformFilter) => ({
 export const setGameDetail = (gameDetail) => ({
   type: SET_GAME_DETAIL,
   gameDetail
+})
+
+export const setLoading = (loading) => ({
+  type: SET_LOADING,
+  loading,
 })
