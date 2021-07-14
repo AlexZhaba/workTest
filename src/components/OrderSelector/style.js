@@ -16,7 +16,6 @@ export const Dropdown = styled(Container)`
 
 export const Wrapper = styled.div`
   width: 100%;
-  /* font-size: 14px; */
   padding: 4px;
   padding-left: 10px;
 `;

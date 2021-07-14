@@ -22,7 +22,6 @@ export const Dropdown = styled(Container)`
   background: ${props => props.DARK_BCG_COLOR};
   z-index: 10;
   box-shadow: 0 2px 4px 0 rgb(0 0 0 / 10%);
-  /* box-shadow: 0 0 10px 5px #222; */
 `;
 
 export const Wrapper = styled.div`

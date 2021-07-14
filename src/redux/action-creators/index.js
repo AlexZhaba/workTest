@@ -2,7 +2,6 @@ import {
   SET_PAGE, SET_GAMES, SET_PLATFORMS, 
   SET_SEARCH, ADD_GAMES, SET_ORDERING, SET_PLATFORM_FILTER, 
    SET_GAME_DETAIL, SET_LOADING } from '@redux/actions';
-import axios from 'axios';
 import URLCreator from '@utils/URLCreator.js';
 
 export const loadGames = (option) => (dispatch, getState) => {
@@ -16,13 +15,13 @@ export const loadGames = (option) => (dispatch, getState) => {
   });
 }
 
-export const loadPlatforms = () => (dispatch, getState) => {
+export const loadPlatforms = () => (dispatch) => {
   fetch(URLCreator.platforms()).then(response => response.json()).then((data) => {
     dispatch(setPlatforms(data.results));
   });
 }
 
-export const loadGameDetail = (slug, callback) => (dispatch, getState) => {
+export const loadGameDetail = (slug, callback) => (dispatch) => {
   fetch(URLCreator.gameInfo(slug)).then(response => response.json()).then((data) => {
     dispatch(setGameDetail(data));
     const mainData = data;

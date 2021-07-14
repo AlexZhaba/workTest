@@ -63,7 +63,6 @@ export const BackgroundShadow = styled.div`
   left: 0;
   bottom: 0;
   width: 100%;
-  /* height: 400px; */
   background: linear-gradient(0deg, rgba(29, 27, 31, 1) 75%, rgba(29, 27, 31, 0) 100%);
 `;
 
@@ -71,7 +70,6 @@ export const Wrapper = styled.div`
   min-height: calc(100vh - 150px);
   position: relative;
   padding-bottom: 50px;
-  /* height: 100%; */
   @media(max-width: 1300px) {
     min-height: calc(100vh - 70px)
   }
