@@ -11,7 +11,7 @@ import { theme } from './config'
 import history from './history';
 
 axios.defaults.baseURL = process.env.REACT_APP_DOMAIN;
-if (module.hot) module.hot.accept()
+if (module.hot) module.hot.accept();
 
 ReactDOM.render(
   <Router  history={history}>

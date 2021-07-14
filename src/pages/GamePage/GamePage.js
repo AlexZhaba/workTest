@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { loadGameDetail, setGameDetail} from '@redux/action-creators';
-import GameTitle from '@com/GameTitle/GameTitle.js'
+import GameTitle from '@com/GameTitle/GameTitle.js';
 import { Wrapper, Background, BackgroundShadow,
          ContentPadding, TopContainer, Info,
          HeadLine, SliderWrapper, Slider, TestImg, Description
-       } from './style.js'
+       } from './style.js';
 
 const GamePage = ( props ) => {
   const { games, loadGameDetail, gameDetail } = props;
   const [activeGame, setActiveGame] = useState();
 
   useEffect( () => {
-    if (!gameDetail) loadGameDetail(props.match.params.slug)
+    if (!gameDetail) loadGameDetail(props.match.params.slug);
     if (props.match.params.slug && !activeGame && games && !gameDetail) {
       setActiveGame(games.filter(g => g.slug === props.match.params.slug)[0]);
     }

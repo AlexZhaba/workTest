@@ -1,4 +1,4 @@
-import * as Actions from '@redux/actions'
+import * as Actions from '@redux/actions';
 
 const initialState = {
   games: null,

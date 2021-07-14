@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 
 const useScroll = (modalRef, setIsModalOpen) => {
+  
   useEffect(() => {
     const handle = (event) => {
       if (typeof event.target.dataset.control !=="undefined") return;
@@ -9,9 +10,9 @@ const useScroll = (modalRef, setIsModalOpen) => {
       } 
     }
     document.addEventListener('click', handle);
-    
+
     return () => {
-      document.removeEventListener('click', handle)
+      document.removeEventListener('click', handle);
     }
   }, [modalRef])
 

@@ -8,8 +8,8 @@ import { Wrapper } from './style';
 const FilterPanel = ({ ordering, setOrdering, loadGames, setPage, platforms }) => {
 
   const handleChange = (data, setIsOpen) => {
-    setIsOpen(false)
-    setOrdering(data.value === 'popularity' ? '' : data)
+    setIsOpen(false);
+    setOrdering(data.value === 'popularity' ? '' : data);
     setPage(1);
     loadGames();
   }

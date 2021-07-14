@@ -10,13 +10,13 @@ const FilterPlatforms = ({ platforms, setPlatformFilter, loadGames, setPage, pla
 
   const menuRef = useRef();
   const [isOpen, setIsOpen] = useState(false);
-  const [parentPlatform, setParentPlatform] = useState(null)
+  const [parentPlatform, setParentPlatform] = useState(null);
 
-  useControlModal(menuRef, setIsOpen)
+  useControlModal(menuRef, setIsOpen);
 
   const handleTop = () => {
-    if (!parentPlatform) setIsOpen(false)
-    setParentPlatform(false)
+    if (!parentPlatform) setIsOpen(false);
+    setParentPlatform(false);
     setPlatformFilter(null);
     setPage(1);
     loadGames();
@@ -24,10 +24,10 @@ const FilterPlatforms = ({ platforms, setPlatformFilter, loadGames, setPage, pla
 
   const handleSetPlatform = (type, id, name) => {
     setIsOpen(false);
-    setParentPlatform(false)
-    console.log('handleSetPlatform()')
-    setPlatformFilter({ type, id, name })
-    setPage(1)
+    setParentPlatform(false);
+    console.log('handleSetPlatform()');
+    setPlatformFilter({ type, id, name });
+    setPage(1);
     loadGames();
   }
 

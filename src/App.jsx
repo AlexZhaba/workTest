@@ -1,16 +1,11 @@
 import React from 'react';
-
 import styled from 'styled-components';
-
-import Header from '@com/Header/Header.js';
+import Header from '@com/Header/Header';
 import { Switch, Route } from 'react-router';
-
 import Main from '@pages/Main/Main.js';
 import GamePage from '@pages/GamePage/GamePage.js';
 
-
-const App = () => {
-  return (
+const App = () => (
     <AppWrapper id="appWrapper">
       <Header/>
       <Switch>
@@ -19,7 +14,7 @@ const App = () => {
       </Switch>
     </AppWrapper>
   )
-}
+
 
 export default App;
 

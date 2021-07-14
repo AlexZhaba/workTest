@@ -1,8 +1,8 @@
 import React, { useState, useRef } from 'react';
-import { Container, Text } from '@shared'
-import { Dropdown } from './style.js'
+import { Container, Text } from '@shared';
+import { Dropdown } from './style.js';
 import Order from './Order';
-import useControlModal from '@hooks/useControlModal.js'
+import useControlModal from '@hooks/useControlModal.js';
 import { orderName } from '../../config';
 
 const orderingType = [ 

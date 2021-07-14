@@ -23,8 +23,8 @@ const GameList = ({ games, loadGames, loadPlatforms, platforms, loadGameDetail, 
 
   const handleCard = (slug) => {
     loadGameDetail(slug, () => {
-      history.push(`/${slug}`)
-    })
+      history.push(`/${slug}`);
+    });
   }
 
   return (

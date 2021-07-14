@@ -18,7 +18,7 @@ const Header = ({  setSearch, loadGames, setPage,  setPlatformFilter, setOrderin
     setSearch(searchString.value);
     setPage(1);
     loadGames();
-    history.push('/')
+    history.push('/');
   }
 
   return (
@@ -27,12 +27,11 @@ const Header = ({  setSearch, loadGames, setPage,  setPlatformFilter, setOrderin
         <Text size="25px" orange hover onClick={() => {
           setPage(1);
           setSearch('');
-          setPlatformFilter(null)
+          setPlatformFilter(null);
           setOrdering('')
           loadGames();
           searchString.onChange({target: {value: ''}})
-          // document.getElementById('headerSearch').value = '';
-          history.push('/')
+          history.push('/');
         }}>
           Zhaba&nbsp;GAMES
         </Text>

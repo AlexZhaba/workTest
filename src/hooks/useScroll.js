@@ -7,11 +7,11 @@ const useScroll = (callback) => {
   const scrollHandler = () => {
     if (document.documentElement.scrollTop + document.documentElement.clientHeight > document.documentElement.scrollHeight - 700) {
       if (!scrollBottom) {
-        setScrollBottom(true)
-        callback()
+        setScrollBottom(true);
+        callback();
       }
     } else {
-      setScrollBottom(false)
+      setScrollBottom(false);
     }
   }
   
