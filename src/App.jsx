@@ -15,7 +15,6 @@ const App = () => (
     </AppWrapper>
   )
 
-
 export default App;
 
 const AppWrapper = styled.div`

@@ -12,14 +12,14 @@ const GameList = ({ games, loadGames, loadPlatforms, platforms, loadGameDetail, 
 
   useScroll(() => {
     loadGames('ADD');
-  })  
+  });
   
   useEffect(() => {
     if (!games || !platforms) {
       loadGames();
       loadPlatforms();
     }
-  }, [])
+  }, []);
 
   const handleCard = (slug) => {
     loadGameDetail(slug, () => {

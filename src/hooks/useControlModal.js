@@ -14,7 +14,7 @@ const useScroll = (modalRef, setIsModalOpen) => {
     return () => {
       document.removeEventListener('click', handle);
     }
-  }, [modalRef])
+  }, [modalRef]);
 
 };
 

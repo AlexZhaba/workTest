@@ -7,26 +7,26 @@ import URLCreator from '@utils/URLCreator.js';
 
 export const loadGames = (option) => (dispatch, getState) => {
   if (option !== 'ADD') dispatch(setLoading(true));
-  axios.get(URLCreator.games(getState().app)).then(response => {
+  fetch(URLCreator.games(getState().app)).then(response => response.json()).then(data => {
     if (option === 'ADD') {
-      dispatch(addGames(response.data.results))
-    } else dispatch(setGames(response.data.results));
+      dispatch(addGames(data.results))
+    } else dispatch(setGames(data.results));
     dispatch(setPage(getState().app.gamePage + 1));
     dispatch(setLoading(false));
   });
 }
 
 export const loadPlatforms = () => (dispatch, getState) => {
-  axios.get(URLCreator.platforms()).then(({ data }) => {
+  fetch(URLCreator.platforms()).then(response => response.json()).then((data) => {
     dispatch(setPlatforms(data.results));
   });
 }
 
 export const loadGameDetail = (slug, callback) => (dispatch, getState) => {
-  axios.get(URLCreator.gameInfo(slug)).then(({ data }) => {
+  fetch(URLCreator.gameInfo(slug)).then(response => response.json()).then((data) => {
     dispatch(setGameDetail(data));
     const mainData = data;
-    axios.get(URLCreator.gameScreenshots(slug)).then( ({ data }) => {
+    fetch(URLCreator.gameScreenshots(slug)).then(response => response.json()).then((data) => {
       dispatch(setGameDetail({...mainData, screenshots: data.results}))
       if (callback) callback();
     });

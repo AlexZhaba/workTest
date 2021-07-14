@@ -28,7 +28,7 @@ const Header = ({  setSearch, loadGames, setPage,  setPlatformFilter, setOrderin
           setPage(1);
           setSearch('');
           setPlatformFilter(null);
-          setOrdering('')
+          setOrdering('popularity')
           loadGames();
           searchString.onChange({target: {value: ''}})
           history.push('/');

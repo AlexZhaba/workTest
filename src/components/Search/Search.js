@@ -14,7 +14,7 @@ const Search = ({ searchString, handleSearch }) => {
     return () => {
       document.removeEventListener('keydown', handle);
     }
-  }, [handleSearch])
+  }, [handleSearch]);
 
   return (
     <SearchContainer placeholder="Name of the game" {...searchString} id='headerSearch'>

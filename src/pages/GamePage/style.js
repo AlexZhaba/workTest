@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import {Text} from "@shared";
+import styled from 'styled-components';
+import { Text } from '@shared';
 
 export const TopContainer = styled.div`
   display: flex;
@@ -12,12 +12,31 @@ export const TopContainer = styled.div`
 export const Slider = styled.div`
   width: 100%;
   display: flex;
+  position: relative;
+  transition: .2s all;
+  margin-left: -${props => props.offset}px;
+`;
+
+export const SliderButton = styled.div`
+  position: absolute;
+  top: 50%;
+  z-index: 3;
+  left: ${props => props.left ? '0' : ''};
+  right: ${props => props.right ? '0' : ''};
+  background: url('https://image.flaticon.com/icons/png/512/271/271228.png');
+  background-size: cover;
+  transform: ${props => props.left ? 'translateY(-50%) rotate(180deg)' : 'translateY(-50%)'};
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  /* background: red; */
 `;
 
 export const SliderWrapper = styled.div`
    flex: 5;
-  overflow-x: scroll;
+  overflow-x: hidden;
   min-height: 300px;
+  position: relative;
   @media(max-width: 1300px) {
     width: 100%;
     order: 1;
