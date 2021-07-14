@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Container } from '@shared';
+import { Container, Text } from '@shared';
 
 export const Dropdown = styled(Container)`
   position: absolute;
@@ -19,4 +19,8 @@ export const Wrapper = styled.div`
   /* font-size: 14px; */
   padding: 4px;
   padding-left: 10px;
+`;
+
+export const TextOrder = styled(Text)`
+  text-overflow: ellipsis;
 `;

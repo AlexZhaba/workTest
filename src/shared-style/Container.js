@@ -13,6 +13,9 @@ const Container = styled.div`
       transition: .2s all;
     `;
   }};
+  ${props => props.pt && `padding-top: ${props.pt}`}
+  ${props => props.pr && `padding-right: ${props.pr}`}
+  ${props => props.ml && `margin-left: ${props.ml}`}
 `;
 
 export default Container;

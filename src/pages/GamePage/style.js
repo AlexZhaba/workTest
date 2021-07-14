@@ -9,42 +9,6 @@ export const TopContainer = styled.div`
   }
 `;
 
-export const Slider = styled.div`
-  width: 100%;
-  display: flex;
-  position: relative;
-  transition: .2s all;
-  margin-left: -${props => props.offset}px;
-`;
-
-export const SliderButton = styled.div`
-  position: absolute;
-  top: 50%;
-  z-index: 3;
-  left: ${props => props.left ? '0' : ''};
-  right: ${props => props.right ? '0' : ''};
-  background: url('https://image.flaticon.com/icons/png/512/271/271228.png');
-  background-size: cover;
-  transform: ${props => props.left ? 'translateY(-50%) rotate(180deg)' : 'translateY(-50%)'};
-  cursor: pointer;
-  width: 30px;
-  height: 30px;
-  /* background: red; */
-`;
-
-export const SliderWrapper = styled.div`
-   flex: 5;
-  overflow-x: hidden;
-  min-height: 300px;
-  position: relative;
-  @media(max-width: 1300px) {
-    width: 100%;
-    order: 1;
-  }
-  @media(max-width: 700px) {
-    min-height: 250px;
-  }
-`;
 
 export const Info = styled.div`
   flex: 3;
@@ -73,6 +37,7 @@ export const TestImg = styled.div`
 
 export const HeadLine = styled(Text)`
   padding-bottom: 3px;
+  margin-top: 20px;
   border-bottom: 4px solid ${props => props.theme.ORANGE_COLOR};
 `;
 export const Description = styled.div`

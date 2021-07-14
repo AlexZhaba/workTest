@@ -1,10 +1,10 @@
 import React, { useState, useRef } from 'react'
-import styled from 'styled-components';
 import { connect } from 'react-redux';
 import Platform from './Platform'
 import useControlModal from '@hooks/useControlModal'
 import { setPlatformFilter, loadGames, setPage } from '@redux/action-creators'
 import { Container, Text } from '@shared';
+import { Dropdown, Wrapper, ParentContainer, PlatformTitle } from './style.js' 
 
 const FilterPlatforms = ({ platforms, setPlatformFilter, loadGames, setPage, platformFilter }) => {
 
@@ -36,12 +36,12 @@ const FilterPlatforms = ({ platforms, setPlatformFilter, loadGames, setPage, pla
   return (
     <Wrapper>
       <Container pad='8px 20px' no-overflow active={platformFilter}>
-        <Text hover size='13px' font='Montserrat' weight='400' onClick={() => setIsOpen(true)} data-control="true"  style={{minWidth: 100, textAlign: 'center'}}>
+        <PlatformTitle hover size='13px' font='Montserrat' weight='400' onClick={() => setIsOpen(true)} data-control="true">
           {platformFilter ? platformFilter.name : 'All Platforms'}
-        </Text>
+        </PlatformTitle>
         {isOpen &&
           <Dropdown ref={menuRef} data-control="true">
-          <Text size='14px' style={{marginLeft: 10}} hover onClick={handleTop}>
+          <Text size='14px' ml="10px" hover onClick={handleTop}>
             {!parentPlatform ? 'All Platforms' : 'Back'}
             
           </Text>
@@ -84,11 +84,6 @@ const FilterPlatforms = ({ platforms, setPlatformFilter, loadGames, setPage, pla
   )
 }
 
-const ParentContainer = styled.div`
-  height: ${props => props.parentPlatform ? '0px': ''};
-  overflow: hidden;
-`;
-
 let mapStateToProps = (state) => ({
   platforms: state.app.platforms,
   platformFilter: state.app.platformFilter
@@ -96,20 +91,4 @@ let mapStateToProps = (state) => ({
 
 export default connect(mapStateToProps, { setPlatformFilter, loadGames, setPage })(FilterPlatforms)
 
-const Dropdown = styled(Container)`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  color: #FFF;
-  padding: 10px 0;
-  background: ${props => props.DARK_BCG_COLOR};
-  z-index: 10;
-  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 10%);
-  /* box-shadow: 0 0 10px 5px #222; */
-`;
-
-const Wrapper = styled.div`
-  margin-left: 10px;
-`;
 

@@ -8,7 +8,7 @@ const GameCard = ({ game, handleCard }) => (
     <Image src={game.background_image && game.background_image.replace('/media/games', '/media/crop/600/400/games')}/>
     <BottomContent>
       <Container>
-        <Text size='20px' style={{paddingRight: '42px'}} hover>
+        <Text size='20px' pr='42px' hover>
             {game.name}
         </Text>
         {game.metacritic && 
@@ -18,7 +18,7 @@ const GameCard = ({ game, handleCard }) => (
         }
       </Container>
       <Info>
-        <Container style={{paddingTop: 0}}>
+        <Container pt='0px'>
           <Text size='13px' display='block' font='Montserrat'>
             Release Date: <Text size='13px' font='Montserrat' weight='500'>{parsedDate(game.released)}</Text>
           </Text>

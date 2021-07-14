@@ -30,7 +30,7 @@ const Header = ({  setSearch, loadGames, setPage,  setPlatformFilter, setOrderin
           setPlatformFilter(null);
           setOrdering('popularity')
           loadGames();
-          searchString.onChange({target: {value: ''}})
+          searchString.onChange({target: {value: ''}});
           history.push('/');
         }}>
           Zhaba&nbsp;GAMES

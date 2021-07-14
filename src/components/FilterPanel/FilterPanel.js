@@ -24,7 +24,6 @@ const FilterPanel = ({ ordering, setOrdering, loadGames, setPage, platforms }) =
   )
 }
 
-
 const mapStateToProps = (state) => ({
   ordering: state.app.ordering,
   platforms: state.app.platforms
