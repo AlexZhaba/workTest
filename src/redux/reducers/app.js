@@ -11,10 +11,8 @@ const initialState = {
 }
 
 const App = (state = initialState, action) => {
-  console.log(action)
   switch (action.type) {
     case Actions.LOAD_GAMES: {
-      console.log('nu load games and what')
       return state;
     }
     

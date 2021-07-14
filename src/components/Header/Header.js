@@ -1,20 +1,18 @@
-import React, { useEffect } from 'react';
-import styled from 'styled-components';
+import React from 'react';
 import { connect } from 'react-redux';
 import { useHistory } from 'react-router';
 
 import {Text} from '@shared';
 import { setSearch } from '@redux/action-creators'
-import logo from '@assets/logo.png'
 import Search from '@com/Search/Search.js';
-
+import { HeaderWrapper, CompanyName } from './style.js';
 import useInput from '@hooks/useInput.js';
 import { loadGames, setPage, setPlatformFilter, setOrdering } from '@redux/action-creators';
 
-const Header = ({ search, setSearch, loadGames, setPage, page, setPlatformFilter, setOrdering }) => {
+const Header = ({  setSearch, loadGames, setPage,  setPlatformFilter, setOrdering }) => {
 
-  let searchString = useInput('');
-  let history = useHistory();
+  const searchString = useInput('');
+  const history = useHistory();
 
   const handleSearch = () => {
     document.getElementById('headerSearch').blur();
@@ -52,29 +50,4 @@ let mapStateToProps = (state) => ({
 })
 
 export default connect(mapStateToProps, { setSearch, loadGames, setPage, setPlatformFilter, setOrdering })(Header);
-
-const CompanyName = styled.div`
-  display: flex;
-  align-items: center;
-  margin-left: 125px;
-  @media(max-width: 650px) {
-    margin: 0;
-    margin-top: 10px;
-  }
-`;
-
-const HeaderWrapper = styled.div`
-  width: 100%;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  /* justify-content: center; */
-  /* border-bottom: 2px solid ${props => props.theme.DARK_COLOR}; */
-  /* justify-content: center; */
-
-  @media(max-width: 650px) {
-    flex-direction: column;
-    height: 90px;
-  }
-`;
 

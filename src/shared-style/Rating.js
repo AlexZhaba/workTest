@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 const MetaColor = (rate) => {
   if (rate <= 50) return 'red';
   if (rate <= 70) return 'yellow';

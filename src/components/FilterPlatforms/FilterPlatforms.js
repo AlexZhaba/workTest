@@ -1,4 +1,4 @@
-import React, {useState, useRef, useEffect } from 'react'
+import React, { useState, useRef } from 'react'
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import Platform from './Platform'
@@ -10,9 +10,7 @@ import { setPlatformFilter, loadGames, setPage } from '@redux/action-creators'
 import { Container, Text } from '@shared';
 
 const FilterPlatforms = ({ platforms, setPlatformFilter, loadGames, setPage, platformFilter }) => {
-
-  let menuRef = useRef();
-
+  const menuRef = useRef();
   const [isOpen, setIsOpen] = useState(false);
   const [parentPlatform, setParentPlatform] = useState(null)
 
@@ -116,11 +114,3 @@ const Wrapper = styled.div`
   margin-left: 10px;
 `;
 
-const ModalContainer = styled(Container)`
-  width: 400px;
-  height: 400px;
-  color: #FFFFFF;
-  box-shadow: 0 0 10px 5px #111;
-
-  /* background: ${props => props.DARK_BCG_COLOR}; */
-`;

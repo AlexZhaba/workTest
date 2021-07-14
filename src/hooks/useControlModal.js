@@ -1,6 +1,6 @@
-import {useEffect, useRef, useState} from "react";
+import { useEffect } from "react";
 
-export default function useScroll(modalRef, setIsModalOpen) {
+const useScroll = (modalRef, setIsModalOpen) => {
 
   useEffect(() => {
     const handle = (event) => {
@@ -16,3 +16,5 @@ export default function useScroll(modalRef, setIsModalOpen) {
   }, [modalRef])
 
 };
+
+export default useScroll;

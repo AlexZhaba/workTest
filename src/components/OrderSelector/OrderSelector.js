@@ -1,8 +1,6 @@
 import React, { useState, useRef } from 'react';
-// import { Dropdown, Header, Icon } from 'semantic-ui-react'
-import styled from 'styled-components';
 import { Container, Text } from '@shared'
-
+import { Dropdown } from './style.js'
 import Order from './Order';
 
 import useControlModal from '@hooks/useControlModal.js'
@@ -13,11 +11,11 @@ const orderingType = [
   'popularity', 'released', '-released', 'metacritic', '-metacritic'
 ]
 
-const OrderSelector = ({ ordering, setOrdering, handleChange }) => {
+const OrderSelector = ({ ordering, handleChange }) => {
 
-  let menuRef = useRef();
+  const menuRef = useRef();
 
-  let [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
 
   useControlModal(menuRef, setIsOpen)
@@ -29,12 +27,6 @@ const OrderSelector = ({ ordering, setOrdering, handleChange }) => {
           <Text size='14px'  weight='500' hover onClick={() => {
             setIsOpen(true)
           }}  data-control="true" >
-            {/* <Dropdown
-              inline
-              options={options}
-              defaultValue={options[0].value}
-              onChange={handleChange}
-            /> */}
             {orderName[ordering]}
           </Text>
         </Text>
@@ -49,20 +41,5 @@ const OrderSelector = ({ ordering, setOrdering, handleChange }) => {
   )
 }
 
-//ascending
-
 export default OrderSelector;
 
-const Dropdown = styled(Container)`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 190px;
-  min-width: 100%;
-  color: #FFF;
-  padding: 10px 0;
-  background: ${props => props.DARK_BCG_COLOR};
-  z-index: 10;
-  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 10%);
-  /* box-shadow: 0 0 10px 5px #222; */
-`;

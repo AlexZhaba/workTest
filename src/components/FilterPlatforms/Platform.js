@@ -3,6 +3,8 @@ import styled from 'styled-components';
 
 import { Text } from '@shared';
 
+import { Container } from './style.js'
+
 const Platform = ({ platform, handleClick, customTitle }) => {
   return (
     <Container key={platform.id}>
@@ -13,9 +15,3 @@ const Platform = ({ platform, handleClick, customTitle }) => {
 
 export default Platform;
 
-const Container = styled.div`
-  width: 100%;
-  /* font-size: 14px; */
-  padding: 4px;
-  padding-left: 10px;
-`;

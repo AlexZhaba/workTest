@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Container = styled.div`
   background: ${props => props.theme.DARK_BCG_COLOR};

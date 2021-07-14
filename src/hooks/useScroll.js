@@ -1,6 +1,6 @@
-import {useEffect, useRef, useState} from "react";
+import { useEffect, useState } from "react";
 
-export default function useScroll(callback) {
+const useScroll = (callback) => {
 
   const [scrollBottom, setScrollBottom] = useState(false);
 
@@ -24,3 +24,5 @@ export default function useScroll(callback) {
 
   return scrollBottom;
 };
+
+export default useScroll;

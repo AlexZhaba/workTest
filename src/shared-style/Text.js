@@ -3,7 +3,6 @@ import styled from 'styled-components';
 let getColor = props => {
   if (props.orange) return props.theme.ORANGE_COLOR;
   if (props.darkOrange) return props.theme.DARK_ORANGE;
-  // if (props.colorInherit) return 'inherit';
   return  props.color || '#FFFFFF';
 }
 
